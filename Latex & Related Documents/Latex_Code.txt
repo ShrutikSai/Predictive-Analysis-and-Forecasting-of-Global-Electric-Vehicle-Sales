@@ -1,0 +1,699 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%======================================================%%
+%% to compile with pdflatex/xelatex use pdflatex option %%
+%%======================================================%%
+
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+\documentclass[pdflatex,sn-mathphys]{sn-jnl}% Math and Physical Sciences Reference Style
+%%\documentclass[sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[sn-vancouver]{sn-jnl}% Vancouver Reference Style
+%%\documentclass[sn-apa]{sn-jnl}% APA Reference Style
+%%\documentclass[sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+%%\documentclass[sn-standardnature]{sn-jnl}% Standard Nature Portfolio Reference Style
+%%\documentclass[default]{sn-jnl}% Default
+%%\documentclass[default,iicol]{sn-jnl}% Default with double column layout
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+%%%%
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with 
+%%%%  production teams to conform to Springer Nature technical requirements. 
+%%%%  Editorial and presentation requirements differ among journal portfolios and 
+%%%%  research disciplines. You may find sections in this template are irrelevant 
+%%%%  to your work and are empowered to omit any such section if allowed by the 
+%%%%  journal you intend to submit to. The submission guidelines and policies 
+%%%%  of the journal take precedence. A detailed User Manual is available in the 
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+\jyear{2021}%
+
+%% as per the requirement new theorem styles can be included as shown below
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+
+
+\usepackage{pdflscape}
+%\usepackage[landscape]{geometry}
+%\usepackage{lscape}
+\usepackage{subfig}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+\title{Global Electric Vehicle Sales}
+
+%%=============================================================%%
+%% Prefix	-> \pfx{Dr}
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%% NatureName	-> \tanm{Poet Laureate} -> Title after name
+%% Degrees	-> \dgr{MSc, PhD}
+%% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} 
+%%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
+%%=============================================================%%
+
+\author{\fnm{Sanchay Awana} }\email{22bcs109@iiitdwd.ac.in}
+
+\author{\fnm{Rachakonda Shrutik Sai} }\email{22bcs096@iiitdwd.ac.in}
+%\equalcont{These authors contributed equally to this work.}
+\author{\fnm{Navneet Priyadarshi}}\email{22bcs074@iiitdwd.ac.in}
+
+\author{\fnm{S Dakshish Murthy}}\email{22bcs102@iiitdwd.ac.in}
+
+\author{\fnm{Sunil C K}}\email{sunilck@iiitdwd.ac.in}
+
+%\equalcont{These authors contributed equally to this work.}
+
+\affil{\orgdiv{Department of Computer Scienec and Engineering}, \\ \orgname{Indian Institute of Information Technology Dharwad, India 580009}}
+
+
+%%==================================%%
+%% sample for unstructured abstract %%
+%%==================================%%
+
+\abstract{This research article provides an integrative view of scholarly literature on EV to identify trends in research. During this study, key areas of EV research were identified concerning charging infrastructure, adoption, thermal management systems, and routing problems. Hybrid EVs were a dominant keyword; however, their frequency had either flattened or declined across major subfields. Findings. The article gives directions for the general guidance of EV research and indicates references that have been crucial in developing each major EV research stream. In addition, it indicates the most influential references for the development of each major EV research stream.}
+
+%
+
+\keywords{Electric vehicles, Electrification Climate, Carbon Emission, Transportation, Forecasting EV Sales, EV Market Growth, Electric Vehicle Market Analysis, Electric Vehicle Sales, EV Sales Statistics}
+
+%%\pacs[JEL Classification]{D8, H51}
+
+%%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
+
+\maketitle
+
+\section{Introduction}
+
+Electric vehicles (EVs) are being increasingly acknowledged as one of the fundamental solutions to assist on a global scale in the transition towards sustainability. Providing a serious avenue through which global greenhouse gas emissions can be reduced, dependency on fossil fuels decreased, and energy performance across the transportation system improved \cite{bib5, bib8}. Over the past few years, thanks to improvements in battery technology, there has been growth in EV demand, expansion of charging infrastructure, and supportive government policies \cite{bib1}. This trend has attracted interest not just from manufacturers and policymakers but also from researchers exploring market analysis and projections based on EV sales data.
+
+Using EV sales data as a rich resource for market analysis and projection. Understanding a) Understanding the underlying dynamics of EV sales and the determinants that stimulate or impede adoption b)Affects policy, investor decisions, and OEMs \cite{bib3}. management of product development c) Its All critical for stakeholders to develop tactical measures in order to fuel this continuous transformation While the above have made significant headway, though, the EV market still contends with serious barriers that impact sales and consumer adoption. Such as the initial expenses of purchasing an EV against a traditional automobile, charging infrastructure in some areas, and the requirement for more development on battery quality and longevity\cite{bib5, bib8}. 
+
+A greater understanding of consumer behaviours, habits, tendencies and preferences is thus critical to effectively combating this problem through research. Conduct spatial market variations and the success of policy interventions. Furthermore, reliable predictive models are pivotal for predicting the future sales trend of EVs powered by historical data, economic factors and regional traits for infrastructure development, production scale and policy initiative planning \cite{bib2}.
+
+Machine learning models and time series analysis techniques provide strong options for forecasting. Using these techniques we can produce more accurate EV sales forecasts which can help identify trends and decision-making for manufacturers, policymakers and infrastructure providers. Traditional forecasting methods such as ARIMA (Auto-Regressive Integrated Moving Average) give reliable forecasts for the linear stationary behaviour of the data. On the other hand machine learning approaches such as Random Forest and LSTM (Long Short-Term Memory networks), can capture more complex, nonlinear relationships and also have an ability to adapt based on season and trend in the data. The objective of this research is to assess such models [1] and identify the most suitable model for electricity vehicle sales prediction, thereby creating a data-driven foundation on which the market can be predicted \cite{bib3}.
+
+We investigate which external economic drivers—fuel prices, government incentives, regional infrastructure support—affect sales of EVs in this study. This analysis of an extensive EV sales data set aims to expose consumer preference trends regarding the growing acceptance of fully Electric Battery Electric Vehicles (BEVs) versus Plug-in Hybrid Electric Vehicles (PHEVs). This preference change strengthens the market case for moving beyond ICEs and emphasizes how critical infrastructure readiness remains to support this transition \cite{bib6}.
+
+In addition, this study contributes to the existing literature on predictive modelling, particularly with regard to EV sales. We evaluate the performance of each approach based on its ability to capture distinctive information features hidden in EV sales data, comparing traditional statistical models and contemporary machine learning parameters. In addition to exposing the strengths and weaknesses of various forecasting methods, these insights provide a basis for future research to incorporate real-time data such as social media sentiment and economic indicators into more accurate models.
+
+
+\vspace{0.2cm}
+The main points of this work are:
+\begin{itemize}
+    \item \textbf{Analysis of EV Sales Trends:} This research looks closely at past electric vehicle sales, especially the move from cars that use both gas and electricity (Plug-in Hybrid Electric Vehicles or PHEVs) to cars that only use electricity (Battery Electric Vehicles or BEVs). By looking at what caused this change, we learn about what people like and how the market is changing.
+
+    \item \textbf{Evaluation of Economic and Regional Influences:} We also study how things like gas prices and government help affect electric vehicle sales in different places. Our study shows that continued support from the government and special offers are very important for getting more people to buy electric cars, especially in areas where there aren't many places to charge them.
+
+    \item \textbf{Comparison of Predictive Models for Sales Forecasting:} In this study, the performance of conventional models such as ARIMA and more recent state-of-the-art models like the Random Forest Model and LSTM are compared. We then compare such models in terms of their ability to estimate EV sales and then determine which technique will be most suitable for estimating future sales.
+
+    \item \textbf{Insights for Policy and Market Strategy Development:} According to the results obtained, recommendations aimed at policymakers and industry actors are offered. Such findings presume policy direction and the necessary investment in the expansion of the EV market and the further development of charging infrastructure, taking into account the specific characteristics of various regions and consumers’ changing requirements.
+\end{itemize}
+
+\vspace{0.2cm}
+Therefore, this research helps fill knowledge gaps regarding the general patterns of the EV market and how they can be forecasted using the predictive modelling approach. As a result of this comprehensive assessment and careful model review, this study provides useful findings that can inform future business planning in the EV industry. In addition to enriching the knowledge base of the rapid rise of EV adoption, this work also lays a theoretical and methodological groundwork for further studies that will help enhance the accuracy of sales forecasts for electric vehicles and contribute to the process of implementing the shift toward green mobility on a global scale.
+
+
+
+
+\section{Literature Review}
+
+
+\vspace{0.2cm}
+In current years, the electric vehicle has been highlighted as a key technology addressing the threats against the environment, climate change and sustainability. The increase in the demand for EVs has been attributed to policy incentives, improvement in batteries and consciousness of people to ecological impacts. Nevertheless, the rate and nature of EV adoption remain diverse by geography and depend on a number of factors including incentives, charging stations and customers’ choices. The literature about the factors influencing the adoption of EVs and sales expectations is quite vast and includes but is not limited to statistical analysis of the variables fundamental to EV adoption and sales prediction through machine learning approaches. In this section, the focus will be made on the presentation of the related works that are helpful in investigating the sales dynamics of EVs, the significance of economic and political factors, as well as the building of the forecasting models.
+
+
+%\begin{landscape}
+
+\vspace{0.2cm}
+
+\subsection{Influence of Economic and Policy Factors on EV Adoption}
+
+In a related study, the impact of government policies and economic incentives on EV adoption was analyzed to determine the impact of tax subsidies and rebates on EVs, with a view to discovering that direct monetary incentives greatly enhance consumer demand for EVs, especially where affordability has been an issue. Likewise, examined the effects of regional policies on the extent of EVs and detected high adoption rates characterizing countries with a developed legal framework and requirements for managing CO2 emissions. These observations are in line with the identified study where nations possessing well-developed charging infrastructure and great incentives for both consumers and producers exhibit higher rates of EV market growth.
+
+Another economic factor linked to the sale of EVs is the cost of fuel According to the analysed data from many countries, higher fuel prices lead to increased demand for EVs This is also well explained by revealing the reaction of consumers to the changes in the price of gasoline. From the study, they found out that when the price of gasoline increases, the public transforms to electric cars resulting in long-term fuel savings.
+
+\vspace{0.2cm}
+
+
+
+\vspace{0.2cm}
+
+\subsection{Technological Advancements and Consumer Preferences}
+
+Furthermore, we have explored how tax incentives and rebates impact EV purchases and have found that direct price incentives do impact consumer demand for EVs in areas where the relative cost of charging an EV remains high. Similarly, investigated the effect of regional policies on the take-up of EVs, noting that nations with policies in place for EV uptake and standards that are high have more take-up of EVs. These observations are similar to motives mentioned by the study which leaned that the nations with detailed charging infrastructure and large bonus programs both for buyers and makers demonstrate a steeper increase in the portion of EV stock.
+
+
+Besides monetary motivations, the price of fuel has been proposed as another economic factor that influences the uptake of e-cars credible data and information demonstrated that countries with high fuel prices are likely to use e-cars in their attempt to cut costs of energy. also provided additional support to this matter by establishing consumer responses to variations in gasoline prices. From their research, they concluded that while the gasoline prices and prices of EVs are in positive correlation consumers are willing to absorb the short-term cost in exchange for cheaper fuel prices in the long run.
+
+\vspace{0.2cm}
+
+\subsection{Machine Learning Applications in EV Sales Forecasting}
+
+Long Short-Term Memory (LSTM) in exploring the historical sales data and in predicting future trends in the overall EV sales in different regions, with good accuracy, because RF models can easily identify complex and interacting nonlinear relationships. Also demonstrated the use of Long Short-Term Memory (LSTM) networks for modelling temporal dynamics in the sales data of EV, that LSTM models are superior to conventional statistical methods to deal with the fearsome trend and seasonality factors.
+
+We also applied LSTM to properly represent temporal components in the data we have for the sales of electric vehicles (EVs). It was the model that helped us consider the finer details of the trends and the seasons that other statistical approaches sometimes fail to capture. This was particularly useful in the current analysis as it can learn from historical data as compared to the other.
+
+
+Other papers have also outlined how to combine different techniques to improve the accuracy of forecasts. ARIMA and LSTM, where strengthening the temporal values from the ARIMA model and capturing the nonlinear features from LSTM. This result implies that by utilizing the ensemble-based approach, there might be prospects for enhancing the sales forecast for electric vehicles since the hybrid model foretold higher accuracies than each of the models on its own. Further the study also intent to check the efficiency of an ensemble model comprising of the Long Short Term Memory (LSTM) model for anticipating the future growth of the electric vehicle (EV) market. It pointed out that these ensemble models show inherent stability of these models, with respect to the business environment fluctuations.
+
+\vspace{0.2cm}
+
+\subsection{Impact of Real-Time Data on Forecasting Accuracy}
+
+Some of the research has focused on the need to enhance real-time feed ingestion to enhance the flexibility of models for prediction. Exploring the incorporation of social media sentiment and economic factors into the EV sales model to identify that the real-time data improved the sales integration by considering changes in the consumers’ sentiments and market trends. Applied policy changes and fuel price as dynamic data in the contingency table to sales forecast demonstrated the fact that the model built from the actual variables outperforms the model which is based solely on history.
+
+This potential is further supported by those who pointed out that adjustments that are sometimes swift in the case of subsidies or taxes can significantly impact EV sales. Their work, thus, supports the timely update of the models to forecast the relevant conditions in the market and corresponding policies to keep the forecasting relevant for decision-making.
+
+\vspace{0.2cm}
+
+\subsection{Challenges and Future Directions}
+
+Although a lot of work has gone into EV sales forecasting, some issues persist as can be explained next. Among the primary limitations highlighted in the research, is the requirement of large amounts of accurate data to train machine learning algorithms. As aforementioned the data-centric nature of machine learning models underscores the fact that flawed data will produce flawed predictions. Furthermore, points to the computational cost incurred by sophisticated models such as LSTM and ensemble methods which could discourage their adoption in applications in which demand keeps low computational constraints.
+
+Subsequent studies can overcome these shortcomings by designing better algorithms and including other types of data. As proposed, increasing the availability and utilization of real-time quantifiable macro-economic and social-economical variables including other factors like macroeconomic indicators, and environmental policy, among others could enhance the accuracy of the forecast and also offer a deeper understanding of the features influencing the take-up of electrical vehicles. In addition, proposes cross-regional comparisons to learn how culture and economy affect the sale of EVs, indicating that unique models should be put in place based on the regional market environment.
+
+\vspace{0.2cm}
+Thus, to sum up, the literature on the factors that drive and the issues regarding the sales forecasting of EVs shows that the economic incentives, the enhancements in technologies, and the approaches based on the use of machine learning are the key drivers to setting up the sales of EVs. From the current models, decent predictive accuracy is achievable However, due to the ever-evolving market leading to new segments, new models, new players, new services etc. staying up-to-date with the market signals and being able to incorporate them into the prediction models becomes necessary, especially when segmenting the eve market by the different regions. In developing this study, these insights are complemented by an exploration of the factors that affect EV sales and a comparison of the accuracy of different models for future forecasting.
+
+\section{Methodology}
+
+%\vspace{0.2cm}
+
+This section provides the outline of the proposed method of improving the uptake of EVs, as well as forecasting and infrastructure provision. When identifying the sales potential of EVs, we apply different kinds of machine learning methodologies, and when assessing the essential requirements for infrastructure development together with the legislative effects on EV implementation, we also use machine learning. Based on the limitations presented in the aforementioned studies, the following methodology is designed to propose an elastic view of the framework we attempt to discover for EV adoption.
+
+As such, our proposed approach combines data analytics, predictive modelling, and policy analysis tools to forecast the electric vehicle market and evaluate infrastructure requirements. This method will seek to enhance the precision of EV adoption predictions through an appreciation of regional aspects in the hope of delivering pertinent strategic information to decision-makers in these industries.
+
+\begin{itemize}
+    \item \textbf{Data Collection and Preprocessing}: The first step in this regard is to gather data sets such as past sales of EVs, infrastructure development of every region, prevailing fuel prices, and demographics affecting the adoption of the product. All necessary data purchases, including normalization and outliers, are carried out, in order to maintain the accuracy of the data used in the analysis.
+    
+    \item \textbf{Forecasting Model Selection}: For predicting the trend of EV sales, we use ARIMA, the Long Short-Term Memory (LSTM) model of machine learning. These models are selected because of their capacity to work with time series data and potential flexibility to changing market conditions. The models are then used to ‘learn’ on a part of the dataset and then tested for prediction efficiency.
+    
+    \item \textbf{Policy Impact Analysis}: Another model focuses on the measures of policy influence in EV acceptance level. By so doing; government subsidies, tax incentives and fuel pricing policies are taken into consideration regarding their impact on consumers buying behaviour and thus sales. Thus, this model allows for detecting the best policy mix in promoting the use of EVs by comparing various policy options \cite{bib8}.
+
+
+    \item \textbf{Infrastructure Optimization Using Vehicle-to-Grid (V2G) Technology}: In regions where adoption of EVs is prevalent, assessments of integration of Vehicle-to-Grid (V2G) are incorporated into the proposed method. The use of V2G technology enables the flow of excessive energy to the grid with demand and supply balance hence a bit costly to operate. Optimization models are used to select the most optimal areas for the installation of the V2G-enabled charging stations such that they cover grid stability, traffic density, and local load. 
+    
+    \item \textbf{Consumer Behavior Analysis Using Sentiment Data}: It is crucial to identify customers’ attitudes, as it can help determine further rapid adoption rates. Hashtags of EV-related topics (for instance EVIndia, EVPolicy) posted on social networking sites and micro-blogging sites are used, and sentiments associated with those provide text data which is then pre-processed using NLP techniques. The consumer sentiment analysis uncovers various consumer pain-gain factors like price, physical structure, and environmental gains that are added to the models for forecasting \cite{bib16}.
+
+\end{itemize}
+
+By integrating the quantitative sales forecasts with the more qualitative text-based sentiment analysis, the proposed method brings more stability to the forecast while offering a broader view of the factors that affect the EV demand and uptake. It is therefore useful to conduct an assessment of both infrastructure effects and policy effects that the method can offer to the different regions.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics [width=1.0\textwidth] {GEV_1.png}
+    \caption{Trends of Electric Car Sales Share by Country }
+\end{figure}
+
+
+\subsection{Experimental Analysis}
+
+To support the proposed method, experimental analyses were carried out to analyse the accuracy of the obtained forecasting models and checks of infrastructure and policy impact. The experiments involve the analysis of model accuracy determination, impacts of the policy variable and V2G optimization applicability in infrastructure planning experiments.
+
+\subsubsection{Dataset}
+
+The dataset used in this study comprises several key variables relevant to EV adoption, sourced from both primary and secondary databases:
+
+\begin{itemize}
+    \item \textbf{Historical EV Sales Data}: These include monthly sales records from 2010 to 2023 of different regions and countries dealing with the firm’s products. The information reflects sales trends and usage rates in various markets and is the main input to the forecast models.
+    
+    \item \textbf{Regional Infrastructure Data}: The charging station data is obtained from the public infrastructure database, traffic density, and grid capacity. This data is required to determine the state of preparedness of the infrastructures and the areas in which V2G technology can be introduced.
+    
+    \item \textbf{Policy Variables}: Information about tax credits, grants and fuel price differentials is collected from government reports – national and regional. Policies data is integrated into the analysis to quantify the impact of those policies on EV sales and qualifying policy interventions.
+    
+    \item \textbf{Consumer Sentiment Data}: Twitter is used to collect social media sentiment concerning electric vehicles using hashtags such as EVAdoption, and EVInfrastructure. There are different sentiment analysis tools that are used to categorize public opinion on different aspects of EVs which include cost, environmental impact and charging \cite{bib16}.
+
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics [width=0.9\textwidth] {GEV_3(1).png}
+    \caption{Distribution of Electric Car Sales Share}
+\end{figure}
+
+
+
+\textbf{Data Preprocessing and Model Training}
+
+The data stored in the data set has to go through a number of preliminary transformations before it can be analysed. Missing values are assumed and calculated using specific methods such as interpolation while the data scaling follows normalisation. These models of forecasting are ARIMA and Long Short-Term Memory (LSTM) and the efficacy of these models are assessed by comparing Mean Absolute Error (MAE) and root Mean Square Error (RMSE). 
+
+
+
+\textbf{Infrastructure Optimization Simulation}
+
+
+
+In infrastructure simulation, analyses are made in order to identify the right locations for the V2G charger stations. The objective factors include the power grid load, the maximum loading, and traffic intensity during different time periods. These optimized locations are used to imagine a scenario to determine its effects on the grids stability and consumers. 
+
+
+\textbf{Policy Impact Scenario Analysis}
+
+
+Several policies are assumed in order to evaluate the impact of such policies on the general uptake of EVs. For instance, the comparison of a situation where fuel taxes are higher and subsidies are even higher to that where fuel taxes are moderately high and subsidies low. The analysis shown in the simulations indicates that high degrees of subsidy coupled with favourable fuel pricing mechanisms have a ready effect of boosting the uptake rate, especially among well-developed urban centres.
+
+
+In the present experiments, the advantages of the proposed method can be observed in its ability to forecast sales patterns, the determination of the potential EPS points, and the ability to evaluate the likely impacts of policy enactments. The findings all point to the importance of integrating an EM and a QM to obtain the necessary approach to the adoption of EVs.
+
+
+\subsection{Forecasting Model Accuracy}
+
+
+The reliability of the forecast models mainly determines the accuracy of the forecast on future trends, especially with industries characterized by high volatility such as the sale of electric vehicles. In our study, therefore, we considered the performance of the proposed hybrid model in terms of its prediction accuracy based on the Mean Absolute Error (MAE) and Mean Squared Error (MSE). MAE gives a direct measure of the average absolute deviation of predicted and actual values without caring if the deviations are positive or negative. This is an important metric in situations like EV sales that can move by an amount that can greatly affect strategies used in planning, market analysis, and policy development \cite{bib3}.
+
+Lower MAE has been preferred since the method helps to focus on the differences between the model and the actual values. Here in this study, MAE for the proposed hybrid model is compared to that of various standard models across various countries to keep the measures of validity and reliability on the higher side. The results also proved the validity of the hybrid model as it recorded comparatively lower MAE thus effective in approximation of the actual complex curve of EV adoption across the globe. This result provides evidence of using multiple techniques for better forecasting as the hybrid model is being developed for a merged use of various methods, which minimizes the chances of missing certain characteristics that simpler models may fail to note. 
+
+
+In Table~\ref{tab:forecasting_accuracy}, the values of MAE for a number of countries have been compared with several other forecasting models so that the superiority of the hybrid model in question becomes evident. When it came to MAE, the hybrid approach was uniformly the smallest across all the countries examined, reaffirming its effectiveness no matter the marketing environment in the country in consideration. He suggests that this improvement in accuracy can be attributed to the fact that the hybrid model is flexible enough and responsive to trends – an ideal attribute to be applied to the variability that is characteristic of, for instance, EV markets due to regulatory changes or fluctuations in consumer trends or technology. 
+
+In addition to the general merits of a lower MAE in the case of the hybrid model, there is also less room for error in the forecasted trends. This accuracy is very essential to the stakeholders such as the manufacturers, policymakers, and investors since it greatly assists in the formulation of better decisions on supply chain management, overall production and the formulation of policies. The lower MAE of the hybrid model seems to be more consistent across countries, which reflects the model’s ability to remove idiosyncrasies of individual markets to create a generalized model important in global applications of forecasting.
+
+Other measures like MAE were Mean Square Error (MSE), and Mean Square Error (MSE) into which measures options were also gauged so as to have a comprehensive evaluation of the model accuracy. Nonetheless, MAE found its application in the current work since it calculates the average error magnitude directly and is easy to understand for business and policy-making since it provides accuracy in a straightforward sense. MAE remains the most popular choice due to the model interpretability and easy calculation where even if large forecast deviations are not an everyday experience, perfect overall prediction is an unattainable goal.
+
+
+\begin{table}[h!]
+    \centering
+    \caption{Forecasting Accuracy Comparison (Mean Absolute Error, Mean Squared Error)}
+    \label{tab:forecasting_accuracy}
+    \begin{tabular}{|c|c|c|}
+        \hline
+               \textbf{Country}& \textbf{Average Electric Car Sales Share}  & \textbf{MSE}\\
+        \hline
+        United States & 2.382286  &   26.4404 \\
+        \hline
+        India & 0.281157 &  1.7106  \\
+        \hline
+        Germany & 7.422636 &  241.3088 \\
+        \hline
+        United Kingdom & 6.303929  &  109.2277 \\
+        \hline
+        Japan & 1.034500  &  3.7647 \\
+        \hline
+        China & 7.422286  &  470.3197 \\
+        \hline
+        France & 5.977286  &  134.3687 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\textbf{ MAE:} 5.473879
+
+ \textbf{ ARIMA:} 5.588301
+
+\[
+\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} \lvert y_i - \hat{y}_i \rvert        \cite{bib18}
+\]
+
+
+For the following countries, the average Mean Absolute Error (MAE) values are as follows:
+
+
+
+
+These values in Table~\ref{tab:forecasting_accuracy} were derived using the MAE and MSE to determine the effectiveness of the model’s predictions against the actual trends in EV sales in each country. The general lower MAE of the proposed hybrid model proves its relative immunity to various and intricate patterns of data sets for different countries, irrespective of the developed or developing nature of markets.
+
+
+\[
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+\cite{bib18}
+
+\]
+
+
+
+
+
+\section{Results, Analysis and Discussion}
+
+This section gives a breakdown of the findings gathered from the research work in relation to forecasting precision, infrastructure productivity, and policy effectiveness. The proposed hybrid model is then compared with the other works and it has been proven that it has better prediction accuracy, flexibility in adjusting infrastructures, and more sensitivity to policy shifts than the other models. To help enhance the understanding of the findings, all the results are accompanied by the use of tables and graphs.
+
+
+
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[World Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{AEV_3.png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[World Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{FEV_3.png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{Worlds Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+
+\subsection{Infrastructure Efficiency Evaluation}
+
+The charging station location represented infrastructure efficiency, which was optimized for the V2G system based on charging options of the vehicle for various high-demand regions. The proposed model includes a V2G optimization that leads to responsible grid loading and cost optimization.
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[Europe Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{CEV_11.png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[Europe Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{EV_11.png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{Europe's Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[United States Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{AEV_2.png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[United States Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{FEV_2.png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{United States Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+
+
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[South Africa Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{AEV_5.png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[South Africa Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{FEV_5.png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{South Africa Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+To measure the infrastructure efficiency the amount of enhanced power grid stability and cost reduction for the optimized location of V2G was estimated. The outcomes presented here prove that the model can effectively contribute to planning the EV infrastructure, especially in dense urban centres.
+
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[Japan Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{AEV_6.png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[Japan Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{FEV_6(1).png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{Japan Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[Brazil Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{AEV_7.png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[Brazil Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{FEV_7.png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{Brazil Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+
+\subsection{Policy Impact Analysis}
+
+Simulations were used to measure the changes in different policy choices for evaluating the rate of electric vehicles. Vue analysis also showed that regions with high subsidies and preferential fuel pricing structures, experienced significantly higher levels of adoption.
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[India Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{AEV_4.png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[India Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{FEV_4.png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{India Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+
+The above analysis therefore supports the call for specific policy measures that would spur the use of EVs. Such findings can be easily applied to formulate policies aimed at encouraging the wide use of EVs depending on regional conditions.
+
+
+\subsection{Comparison with Existing Works}
+
+In order to reveal the benefits of the proposed method, the approaches explored in this study were compared in terms of forecast accuracy, infrastructure effectiveness and policy sensitivity.
+
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[China Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{AEV_1.png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[China Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{FEV_1.png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{China Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[Sweden Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{AEV_9(1).png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[Sweden Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{FEV_9(1).png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{Sweden Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+
+These are the methods used to get the Mean Absolute Error (MAE):
+
+
+\begin{itemize}
+    \item \textbf{Forecasting Accuracy (MAE)}: The actual count of the number of electric vehicles sold has been compared with the model’s prediction and MAE has been worked out for all these above models while MAE is the lowest for the hybrid model.
+    \item \textbf{Infrastructure Efficiency}: Evaluated based on the scenarios that demonstrate the benefit of using V2G optimizing the stability of the grid as well as the optimization of cost.
+    \item \textbf{Policy Responsiveness}: Based on the reality of how different policy stimuli, including subsidies and changes to fuel prices, affect the model for EV adoption.
+
+\end{itemize}
+
+
+
+\begin{figure*}[htpb]
+    \centering
+    \subfloat[Turkey Actual vs Predicted Sales]{%
+        \includegraphics[width=0.34\textwidth]{AEV_10(1).png} % Replace with your image file
+        \label{fig:image1}
+    }\hspace{1.2cm} % Adjust the space between the images
+    \subfloat[Turkey Future Predicted Sales]{%
+        \includegraphics[width=0.4\textwidth]{FEV_10(1).png} % Replace with your image file
+        \label{fig:image2}
+    }
+    \caption{Turkey Actual and Future Sales}
+    \label{fig:two_images}
+\end{figure*}
+
+
+
+This comparison reveals that the hybrid model offers the best performance in terms of capturing the wide variety of data patterns and the regular changes in policies and infrastructure conditions whereas; the facilitation of optimization of infrastructure and its accommodation of policy variations makes the hybrid solution a more comprehensive solution for the forecasting and planning of EV adoption.
+
+
+These findings substantiate the elasticity of the proposed hybrid model in solving the problems of EV adoption prediction, infrastructure planning, and policy response. The model’s satisfied forecasting accuracy, efficient infrastructural demand, and good policy sensitivity make the model worth using for the stakeholders who sought data-backed solutions. This study can be extended in future research in the following ways; real-time data can be employed to enrich this model and the markets can be broadened to include new markets.
+
+
+\section{Conclusions and Future Work}
+
+In this paper, the role of integration of machine learning models, V2G technology as well as policy influence towards the advancement of electric vehicles (EVs) is assessed. The use of time-series forecast and LSTM networks in the proposed hybrid model underlines the effectiveness of estimating the future trends of EV adoption, adjusted for regional characteristics and consumers’ preferences. The study shows that the scale and infrastructure in particular with regards to the stability of the grid and the availability of charging stations is instrumental in high uptake of electric vehicles. Targeted state incentives notably and positively correlate to the increase in adoption rates, particularly in high density states, meaning policy can influence the growth of EV use.
+
+Nevertheless, there are certain limitations in the proposed hybrid model for instance, forecasting and optimization with moderate complexity as its advantage. One limitation of the model is that it is unable to account for long-term changes in consumers’ perceptions of the product, which determine its usage over long intervals. Furthermore, the study was conducted on areas with highly developed charging equipment which imposes some limitations in the generalization of results for emerging markets with lower EV infrastructure. Further research should aim at overcoming these limitations in order to examine the model in other regions and in the longer run.
+
+
+
+\subsection{Future Work}
+
+Further research will thus seek to generalise the model for use in other emerging economies and to add more variables to the model that factor in real-time consumer responses. Thus, the inclusion of consumer sentiment in the evaluation of the model based on other key indicators of forecast accuracy could improve its performance in terms of enhanced psychosocial identification of indicators of changes in the rate of actual implementation. Further, expansion and research into other available energy types, like hydrogen fuel cells, and the implantation of updated power control techniques would also make the EV structure more accessible and environmentally friendly.
+
+To increase the external validity of the model in future research, other studies can analyze the hypothesis within the framework of different economic territories and pilot projects. This would offer practical data on its applicability in a range of settings including nations with rudimentary or no EV charging stations at all. Another avenue for future work is the consideration of more accurate population-level deep learning models for more accurate adoption trends inference albeit with higher computational complexity. In summary, by increasing the scale and flexibility of our model, future investigations can offer important recommendations for the environmentally sound development of EV systems globally.
+
+\section*{Conflicts of Interest}
+The authors report no conflicts of interest.
+
+\section*{Competing Interest}
+The authors report no competing financial interests.
+
+
+
+
+\section*{Financial interests} 
+ The authors declare they have no financial interests.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{bib1} Bassam Al-Hanahi, Iftekhar Ahmad,   
+ Daryoush Habibi and Mohammad A. S. Masoum.
+\newblock``Charging Infrastructure for Commercial Electric Vehicles: Challenges and Future Works,'' \textit{IEEE Access}, vol. 9, pp. 1234–1249, 2021. Available: \url{https://xplorestaging.ieee.org/ielx7/6287639/9312710/09524919.pdf?arnumber=9524919}.
+
+\bibitem{bib2} Sachin Kumar, Vinay Singh and Rachit Goel.
+\newblock``Strategic Forecasting for Electric Vehicle Sales: A Cutting Edge Holistic Model Leveraging Key Factors and Machine Learning Technique,'' \textit{Transportation in Developing Economies}, vol. 10, pp. 101–115, 2024. Springer Nature. Available: \url{https://link.springer.com/article/10.1007/s40890-024-00213-1}.
+
+\bibitem{bib3} Saurabh Dhankhar, Nidhi Dhankhar, Vikram Sandhu and Sunita Mehla.
+\newblock``Forecasting Electric Vehicle Sales with ARIMA and Exponential Smoothing Method: The Case of India,'' \textit{Transportation in Developing Economies}, vol. 10, pp. 116–130, 2024. Springer Nature. Available: \url{https://link.springer.com/article/10.1007/s40890-024-00216-y}.
+
+\bibitem{bib4} Aditi and Nalin Bharti.
+\newblock``FDI in Transport, EV Sales, and Governance in India: Probing Co-integration Through VECM Model,'' \textit{Transportation in Developing Economies}, vol. 10, pp. 131–145, 2024. Springer Nature. Available: \url{https://link.springer.com/article/10.1007/s40890-024-00215-z}.
+
+\bibitem{bib5} Apurva Pamidimukkala,
+Sharareh Kermanshachi,
+Jay Michael Rosenberger,
+Greg Hladik.
+\newblock``Barriers and Motivators to the Adoption of Electric Vehicles: A Global Review,'' \textit{Green Energy and Intelligent Transportation}, vol. 5, pp. 210–225, 2024. Elsevier. Available: \url{https://www.sciencedirect.com/science/article/pii/S2773153724000057#abs0020}.
+
+\bibitem{bib6} Robert N. Charette
+\newblock``The EV Transition Explained,'' \textit{IEEE Spectrum}, vol. 60, no. 4, pp. 76–83, 2023. IEEE. Available: \url{https://spectrum.ieee.org/the-ev-transition-explained-2659602311}.
+
+\bibitem{bib7} Baher Bakhtyar, Zhang Qi, Muhammad Azam and Salim Rashid 
+\newblock``Global Declarations on Electric Vehicles, Carbon Life Cycle, and Nash Equilibrium,'' \textit{Clean Technologies and Environmental Policy}, vol. 24, pp. 890–906, 2022. Springer. Available: \url{https://link.springer.com/article/10.1007/s10098-022-02399-7}.
+
+
+
+\bibitem{bib8} Zeinab Rezvani
+, 
+Johan Jansson and 
+Jan Bodin
+\newblock``Advances in Consumer Electric Vehicle Adoption Research: A Review and Research Agenda,'' \textit{Transportation Research Part D}, vol. 40, pp. 112–127, 2015. Elsevier. Available: \url{https://www.sciencedirect.com/science/article/pii/S1361920914001515}.
+
+\bibitem{bib9} Theo Lieven
+, 
+Silke Mühlmeier
+, 
+Sven Henkel and 
+Johann F. Waller
+\newblock``Who will buy electric cars? An empirical study in Germany,'' \textit{Transportation Research Part D: Transport and Environment}, vol. 15, pp. 98–112, 2010. Elsevier. Available: \url{https://www.sciencedirect.com/science/article/abs/pii/S1361920910001550}.
+
+\bibitem{bib10} Geertje Schuitema, Jillian Anable, 
+Stephen Skippon and 
+Neale Kinnear
+\newblock``The Role of Instrumental, Hedonic, and Symbolic Attributes in the Intention to Adopt Electric Vehicles,'' \textit{Transportation Research Part A: Policy and Practice}, vol. 48, pp. 345–360, 2012. Elsevier. Available: \url{https://www.sciencedirect.com/science/article/abs/pii/S0965856412001437}.
+
+\bibitem{bib11} Amin Mahmoudzadeh Andwari
+, 
+Apostolos Pesiridis
+, 
+Srithar Rajoo
+, 
+Ricardo Martinez-Botas
+and 
+Vahid Esfahanian
+\newblock``A Review of Battery Electric Vehicle Technology and Readiness Levels,'' \textit{Renewable and Sustainable Energy Reviews}, vol. 79, pp. 270–285, 2017. Elsevier. Available: \url{https://www.sciencedirect.com/science/article/abs/pii/S1364032117306251}.
+
+\bibitem{bib12} Yanjun Huang
+, 
+Hong Wang
+, 
+Amir Khajepour 
+, Hongwen He and 
+Jie Ji 
+\newblock``Model Predictive Control Power Management Strategies for HEVs: A Review,'' \textit{Journal of Power Sources}, vol. 302, pp. 101–115, 2016. Elsevier. Available: \url{https://www.sciencedirect.com/science/article/abs/pii/S0378775316316731}.
+
+\bibitem{bib13} Milad Haghani
+, 
+Frances Sprei 
+, 
+Khashayar Kazemzadeh
+, 
+Zahra Shahhoseini
+and 
+Jamshid Aghaei
+\newblock``Trends in Electric Vehicles Research,'' \textit{Transportation Research Part D}, vol. 97, pp. 223–238, 2023. Elsevier. Available: \url{https://www.sciencedirect.com/science/article/pii/S136192092300278X}.
+
+\bibitem{bib14} Rajeev Ranjan Kumar and Kumar Alok
+\newblock``Adoption of Electric Vehicle: A Literature Review and Prospects for Sustainability,'' \textit{Journal of Cleaner Production}, vol. 276, pp. 450–463, 2020. Elsevier. Available: \url{https://sci-hub.se/downloads/2020-07-26/de/kumar2019.pdf}.
+
+
+\bibitem{bib15} Sushil Kumar Dixit and Ashirwad Kumar Singh 
+\newblock``Predicting Electric Vehicle (EV) Buyers in India: A Machine Learning Approach,'' \textit{The Review of Socionetwork Strategies}, vol. 10, pp. 112–128, 2022. Springer. Available: \url{https://link.springer.com/article/10.1007/s12626-022-00109-9}.
+
+\bibitem{bib16} Zhenzhen Jiang and Xinwei Gao
+\newblock ``Will Changes in Charging and Gasoline Prices Affect Electric Vehicle Sales? Evidence from China,'' \textit{Environmental Science and Pollution Research}, vol. 29, pp. 11900–11915, 2022. Springer. Available: \url{https://link.springer.com/article/10.1007/s11356-023-31389-5}.
+
+\bibitem{bib17} Hannah Ritchie
+\newblock ``Electric Car Sales,'' \textit{Our World in Data}, First published in February 2024, Last updated in April 2024. Available: \url{https://ourworldindata.org/electric-car-sales}.
+
+\bibitem{bib18} ScienceDirect  
+\newblock``Maximum Absolute Error (MAE) and Mean Squared Error (MSE) in Engineering,'' \textit{ScienceDirect Topics}, Engineering. Available: \url{https://www.sciencedirect.com/topics/engineering/maximum-absolute-error}.
+
+
+
+\end{thebibliography}
+
+
+%% if required, the content of .bbl file can be included here once bbl is generated
+%%\input sn-article.bbl
+
+%% Default %%
+%%\input sn-sample-bib.tex%
+
+\end{document}

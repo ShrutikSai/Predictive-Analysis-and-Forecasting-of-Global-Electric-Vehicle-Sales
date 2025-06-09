@@ -109,5 +109,3 @@ The project includes rich graphical analyses comparing actual vs. predicted EV s
 ---
 
 *This README file is designed with clarity and elegance, focusing on developer experience consistent with a high-end modern open-source project.*
-
-```

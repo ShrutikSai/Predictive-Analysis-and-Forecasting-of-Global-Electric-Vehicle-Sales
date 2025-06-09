@@ -3,7 +3,7 @@ Predictive analysis and forecasting of global electric vehicle sales involve uti
 
 
 `README.md`
-```md
+
 # Global Electric Vehicle Sales Analysis & Forecasting
 
 This project provides a comprehensive analysis and forecasting framework for global electric vehicle (EV) sales. It integrates data analytics, advanced machine learning models, policy impact analysis, and infrastructure optimization to deliver accurate predictions and actionable insights aimed at accelerating EV adoption worldwide.
